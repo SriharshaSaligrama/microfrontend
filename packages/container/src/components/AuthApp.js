@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { authMount } from '../../../auth/src/bootstrap'
+import { authMount } from 'auth/AuthApp'
 import { useHistory } from 'react-router-dom'
 
 export default ({ onSignIn }) => {
