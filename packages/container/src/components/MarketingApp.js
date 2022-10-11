@@ -7,7 +7,7 @@ export default () => {
     const history = useHistory()
 
     useEffect(() => {
-        const { onParentNavigate } = marketingMount(ref.current, {
+        marketingMount(ref.current, {
             initialPath: history.location.pathname,
             onNavigate: ({ pathname: nextPathname }) => {
                 const { pathname } = history.location
