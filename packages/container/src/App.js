@@ -36,7 +36,7 @@ export default () => {
                                 {!isSignedIn && <Redirect to='/' />}
                                 <DashboardLazy />
                             </Route>
-                            {/*<Route path='/' component={MarketingLazy} /> */}
+                            <Route path='/' component={MarketingLazy} />
                         </Switch>
                     </Suspense>
                 </div>
