@@ -4,8 +4,8 @@ import { createBrowserHistory } from 'history'
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles'
 import Progress from './components/Progress'
 import Header from './components/Header'
-import MarketingApp from './components/MarketingApp'
 
+const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
 
@@ -36,7 +36,7 @@ export default () => {
                                 {!isSignedIn && <Redirect to='/' />}
                                 <DashboardLazy />
                             </Route>
-                            <Route path='/' component={MarketingApp} />
+                            <Route path='/' component={MarketingLazy} />
                         </Switch>
                     </Suspense>
                 </div>
