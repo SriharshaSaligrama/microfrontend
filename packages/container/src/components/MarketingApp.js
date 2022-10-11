@@ -14,7 +14,7 @@ export default () => {
                 if (pathname !== nextPathname) history.push(nextPathname)
             }
         })
-        history.listen(onParentNavigate)
+        //history.listen(onParentNavigate)
     }, [])
     return <div ref={ref} />
 }
