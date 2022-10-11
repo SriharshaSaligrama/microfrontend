@@ -13,7 +13,7 @@ export default () => {
                 const { pathname } = history.location
                 if (pathname !== nextPathname) history.push(nextPathname)
             }
-        })
+        }).onParentNavigate
         history.listen(onParentNavigate)
     }, [])
     return <div ref={ref} />
